@@ -52,10 +52,10 @@ async.forEach src, (file, done) ->
         fileDest = here dest, name
 
         console.log here dest
-        console.log fs.path.existsSync here dest
+        console.log fs.fs.existsSync here dest
     
         if program.output?
-            if not (fs.path.existsSync here dest) then fs.mkdirSync here dest
+            if not (fs.fs.existsSync here dest) then fs.mkdirSync here dest
             fs.writeFile fileDest, output, done
         else
             process.stdout.write output
